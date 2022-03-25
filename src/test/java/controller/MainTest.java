@@ -32,13 +32,19 @@ public class MainTest {
 
     @Test
     public void testEmptyTest() {
-        input = new String[]{"", "", ""};
-        Assert.assertEquals("", Main.solveProblem(input));
+        input = new String[]{"qwerty", "qwg", ""};
+        Assert.assertEquals("q", Main.solveProblem(input));
     }
 
     @Test
     public void testEmpty2Test() {
         input = new String[]{};
+        Assert.assertEquals("", Main.solveProblem(input));
+    }
+
+    @Test
+    public void testEmpty3Test() {
+        input = new String[]{"", "", ""};
         Assert.assertEquals("", Main.solveProblem(input));
     }
 }
