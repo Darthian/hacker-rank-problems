@@ -13,37 +13,43 @@ public class MainTest {
     }
 
     @Test
-    public void testFirstTest() {
+    public void testFirstCase() {
         input = new String[]{"123fgh45", "1234oht", "1sdf"};
         Assert.assertEquals("1", Main.solveProblem(input));
     }
 
     @Test
-    public void testWithoutCommonPrefixTest() {
+    public void testWithoutCommonPrefixCase() {
         input = new String[]{"dfgh", "abcd", "ab", "a"};
         Assert.assertEquals("", Main.solveProblem(input));
     }
 
     @Test
-    public void testCommonPrefixTest() {
+    public void testCommonPrefixCase() {
         input = new String[]{"qwerty", "qwg", "qwe"};
         Assert.assertEquals("qw", Main.solveProblem(input));
     }
 
     @Test
-    public void testEmptyTest() {
+    public void testNoPrefixCase() {
         input = new String[]{"qwerty", "qwg", ""};
-        Assert.assertEquals("q", Main.solveProblem(input));
+        Assert.assertEquals("", Main.solveProblem(input));
     }
 
     @Test
-    public void testEmpty2Test() {
+    public void testEmptyCase() {
         input = new String[]{};
         Assert.assertEquals("", Main.solveProblem(input));
     }
 
     @Test
-    public void testEmpty3Test() {
+    public void testEntirePrefixCase() {
+        input = new String[]{"asd", "asd"};
+        Assert.assertEquals("", Main.solveProblem(input));
+    }
+
+    @Test
+    public void testEmptyAllCase() {
         input = new String[]{"", "", ""};
         Assert.assertEquals("", Main.solveProblem(input));
     }

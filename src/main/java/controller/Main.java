@@ -13,10 +13,12 @@ public class Main {
             return "";
         }
     }
-
+    /*
+    "asd", "asd"
+     */
     public static String evaluatePrefix(String[] array, StringBuilder prefix, Integer index, Integer kIndex) {
-        if(array[index].length()==0) {
-            return prefix.toString();
+        if (array[index].length() == 0) {
+            return "";
         }
         if (index == 0) {
             prefix.append(array[index].charAt(kIndex));
@@ -25,7 +27,7 @@ public class Main {
             prefix.deleteCharAt(prefix.length() - 1);
             return prefix.toString();
         }
-        if (index + 1 == array.length) {
+        if (index + 1 >= array.length) {
             return evaluatePrefix(array, prefix, 0, ++kIndex);
         } else {
             return evaluatePrefix(array, prefix, ++index, kIndex);
