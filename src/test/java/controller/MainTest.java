@@ -44,8 +44,8 @@ public class MainTest {
 
     @Test
     public void testEntirePrefixCase() {
-        input = new String[]{"asd", "asd"};
-        Assert.assertEquals("", Main.solveProblem(input));
+        input = new String[]{"asd","asd"};
+        Assert.assertEquals("asd", Main.solveProblem(input));
     }
 
     @Test
