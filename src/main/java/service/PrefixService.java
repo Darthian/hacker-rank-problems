@@ -1,23 +1,9 @@
-package controller;
+package service;
 
-public class Main {
-    public static void main(String[] array) {
-        System.out.println(solveProblem(array));
-    }
+public class PrefixService {
 
-    public static String solveProblem(String[] array) {
-        StringBuilder prefix = new StringBuilder();
-        if (array != null && array.length > 0) {
-            return evaluatePrefix(array, prefix, 0, 0);
-        } else {
-            return "";
-        }
-    }
-    /*
-    "asd", "asd"
-     */
     public static String evaluatePrefix(String[] array, StringBuilder prefix, Integer index, Integer kIndex) {
-        if (array[index].length() == 0) {
+        if (array[index].isEmpty()) {
             return "";
         }
         if (kIndex >= array[index].length() ) {
