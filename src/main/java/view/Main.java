@@ -2,7 +2,7 @@ package view;
 
 import static service.PrefixService.evaluatePrefix;
 import static service.TreeService.createTree;
-import static service.EbayChallengeService.sortString;
+import static service.SortString.sortString;
 
 public class Main {
     public static void main(String[] array) {

@@ -3,7 +3,7 @@ package service;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class EbayChallengeService {
+public class SortString {
 
     public static String sortString(String str) {
         char[] letters = str.toCharArray();
