@@ -2,6 +2,7 @@ package view;
 
 import static service.PrefixService.evaluatePrefix;
 import static service.TreeService.createTree;
+import static service.EbayChallengeService.sortString;
 
 public class Main {
     public static void main(String[] array) {
@@ -21,6 +22,7 @@ public class Main {
         System.out.println("Menu:");
         System.out.println("1. Solve Problem");
         System.out.println("2. Tree Problem");
+        System.out.println("3. Sort String Problem");
         System.out.println("0. Exit");
 
         System.out.print("Enter your choice: ");
@@ -30,7 +32,7 @@ public class Main {
         int choice = -1;
         try {
             choice = Integer.parseInt(inputString);
-        }   catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Invalid choice. Please try again.");
         }
 
@@ -47,6 +49,13 @@ public class Main {
                 break;
             case 2:
                 createTree();
+                displayMenu();
+                break;
+            case 3:
+                System.out.println("Enter the string:");
+                scanner.nextLine(); // consume newline
+                String str = scanner.nextLine();
+                System.out.println("Result: " + sortString(str));
                 displayMenu();
                 break;
             default:
