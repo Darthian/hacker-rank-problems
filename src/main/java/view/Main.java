@@ -3,6 +3,8 @@ package view;
 import static service.PrefixService.evaluatePrefix;
 import static service.TreeService.createTree;
 import static service.SortString.sortString;
+import static service.TokenService.generateToken;
+import static service.DemoService.getCharacter;
 
 public class Main {
     public static void main(String[] array) {
@@ -23,6 +25,8 @@ public class Main {
         System.out.println("1. Solve Problem");
         System.out.println("2. Tree Problem");
         System.out.println("3. Sort String Problem");
+        System.out.println("4. Tokens Problem");
+        System.out.println("5. Demo Problem");
         System.out.println("0. Exit");
 
         System.out.print("Enter your choice: ");
@@ -36,6 +40,7 @@ public class Main {
             System.out.println("Invalid choice. Please try again.");
         }
 
+        String str = "";
         switch (choice) {
             case 0:
                 break;
@@ -54,8 +59,24 @@ public class Main {
             case 3:
                 System.out.println("Enter the string:");
                 scanner.nextLine(); // consume newline
-                String str = scanner.nextLine();
+                str = scanner.nextLine();
                 System.out.println("Result: " + sortString(str));
+                displayMenu();
+                break;
+            case 4:
+                System.out.println("Enter the string:");
+                scanner.nextLine(); // consume newline
+                str = scanner.nextLine();
+                System.out.println("Result: ");
+                generateToken(str);
+                displayMenu();
+                break;
+            case 5:
+                System.out.println("Enter the string:");
+                scanner.nextLine(); // consume newline
+                str = scanner.nextLine();
+                System.out.println("Result: "+getCharacter(str));
+
                 displayMenu();
                 break;
             default:
