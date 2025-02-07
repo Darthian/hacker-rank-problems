@@ -10,6 +10,6 @@ public class DemoServiceTest {
     public void testGetCharacter() {
         Assert.assertEquals("w", DemoService.getCharacter("swiss"));
         Assert.assertEquals("v", DemoService.getCharacter("level"));
-        //TODO Assert.assertEquals(null, DemoService.getCharacter("aabbcc"));
+        Assert.assertEquals("null", DemoService.getCharacter("aabbcc"));
     }
 }

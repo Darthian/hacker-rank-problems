@@ -19,12 +19,19 @@ public class FunctionalImplementations {
                 new DummyStructure("5", "John Perez", "",30, 1000, 10.00, new int[]{10, 11, 12}));
 
 
-        Collections.sort(dummyStructures, new Comparator<DummyStructure>() {
+        dummyStructures.sort(new Comparator<DummyStructure>() {
             @Override
             public int compare(DummyStructure o1, DummyStructure o2) {
                 return o1.name().compareTo(o2.name());
             }
         });
+
+        /*Collections.sort(dummyStructures, new Comparator<DummyStructure>() {
+            @Override
+            public int compare(DummyStructure o1, DummyStructure o2) {
+                return o1.name().compareTo(o2.name());
+            }
+        });*/
 
         //Summarize of Sanchez:
         int summarize = dummyStructures.stream()

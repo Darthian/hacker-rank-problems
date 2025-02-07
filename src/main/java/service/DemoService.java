@@ -1,5 +1,6 @@
 package service;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -29,23 +30,23 @@ Output: null
 
 
     public static String getCharacter(String input) {
-         Map<String, Integer> charactersTree = new TreeMap<>();
-         int iterator = 0;
-         for(int i=0; i < input.length(); i++) {
-             charactersTree.put(String.valueOf(input.charAt(i)),
-                     charactersTree.getOrDefault(String.valueOf(input.charAt(i)), 0) + ++iterator);
-         }
-         Integer auxiliar = 10000;
-         String result ="";
-
-         for(Map.Entry<String, Integer> i : charactersTree.entrySet()) {
-             if(i.getValue() < auxiliar) {
-                 auxiliar = i.getValue();
-                 result = i.getKey();
-             }
-         }
-
-         return result;
+        Map<String, int[]> charactersTree = new TreeMap<>();
+        for (int i = 0; i < input.length(); i++) {
+            charactersTree.put(String.valueOf(input.charAt(i)),
+                    new int[]{i, charactersTree.getOrDefault(String.valueOf(input.charAt(i)), new int[]{0, 0})[1] + 1});
+        }
+        int auxiliar = 100000;
+        String result = "";
+        //charactersTree.forEach((key, value) -> System.out.println(key + " " + Arrays.toString(value)));
+        for (Map.Entry<String, int[]> characterNode : charactersTree.entrySet()) {
+            if (characterNode.getValue()[0] < auxiliar) {
+                auxiliar = characterNode.getValue()[0];
+                result = characterNode.getKey();
+            }
+            if(characterNode.getValue()[1] > 1)
+                result = "null";
+        }
+        return result;
     }
 
 
