@@ -36,7 +36,10 @@ public class FunctionalImplementations {
         //Summarize of Sanchez:
         int summarize = dummyStructures.stream()
                 .filter(structure -> structure.name().contains("Sanchez"))
-                .map(DummyStructure::number).mapToInt(Integer::intValue).sum();
+                .map(DummyStructure::number)
+                .mapToInt(Integer::intValue)
+                .sum();//.reduce(0, Integer::sum);
+
 
         return String.valueOf(summarize);
     }
