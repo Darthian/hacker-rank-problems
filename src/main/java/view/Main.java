@@ -5,7 +5,7 @@ import static service.TreeService.createTree;
 import static service.SortString.sortString;
 import static service.TokenService.generateToken;
 import static service.DemoService.getCharacter;
-import static service.FrogJumpingService.getTotalJumps;
+import static service.JumpingFrogService.getTotalJumps;
 
 public class Main {
     public static void main(String[] array) {

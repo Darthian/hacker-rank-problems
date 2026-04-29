@@ -3,7 +3,7 @@ package service;
 import java.util.Arrays;
 import java.util.List;
 
-public class FrogJumpingService {
+public class JumpingFrogService {
     /*
     * Contexto
     *
