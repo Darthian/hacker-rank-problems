@@ -5,6 +5,7 @@ import static service.TreeService.createTree;
 import static service.SortString.sortString;
 import static service.TokenService.generateToken;
 import static service.DemoService.getCharacter;
+import static service.FrogJumpingService.getTotalJumps;
 
 public class Main {
     public static void main(String[] array) {
@@ -27,6 +28,7 @@ public class Main {
         System.out.println("3. Sort String Problem");
         System.out.println("4. Tokens Problem");
         System.out.println("5. Demo Problem");
+        System.out.println("6. Frog jumping Problem");
         System.out.println("0. Exit");
 
         System.out.print("Enter your choice: ");
@@ -58,14 +60,14 @@ public class Main {
                 break;
             case 3:
                 System.out.println("Enter the string:");
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 str = scanner.nextLine();
                 System.out.println("Result: " + sortString(str));
                 displayMenu();
                 break;
             case 4:
                 System.out.println("Enter the string:");
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 str = scanner.nextLine();
                 System.out.println("Result: ");
                 generateToken(str);
@@ -73,10 +75,16 @@ public class Main {
                 break;
             case 5:
                 System.out.println("Enter the string:");
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 str = scanner.nextLine();
                 System.out.println("Result: "+getCharacter(str));
-
+                displayMenu();
+                break;
+            case 6:
+                System.out.println("Enter the array (use ',' to split values):");
+                scanner.nextLine();
+                str = scanner.nextLine();
+                System.out.println(getTotalJumps(str.trim()));
                 displayMenu();
                 break;
             default:
