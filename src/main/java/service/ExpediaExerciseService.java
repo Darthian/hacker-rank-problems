@@ -1,9 +1,8 @@
 package service;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class PossibleNewService {
+public class ExpediaExerciseService {
     /*
     * Context
     * int[] arr = {2, 3, -8, 7, -1, 2, 3};

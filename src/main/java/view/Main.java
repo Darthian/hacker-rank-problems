@@ -7,7 +7,7 @@ import static service.TokenService.generateToken;
 import static service.DemoService.getCharacter;
 import static service.JumpingFrogService.getTotalJumps;
 
-import static service.PossibleNewService.getAnswer;
+import static service.ExpediaExerciseService.getAnswer;
 
 public class Main {
     public static void main(String[] array) {
