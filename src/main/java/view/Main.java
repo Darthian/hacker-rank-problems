@@ -7,6 +7,8 @@ import static service.TokenService.generateToken;
 import static service.DemoService.getCharacter;
 import static service.JumpingFrogService.getTotalJumps;
 
+import static service.PossibleNewService.getAnswer;
+
 public class Main {
     public static void main(String[] array) {
         displayMenu();
@@ -85,6 +87,14 @@ public class Main {
                 scanner.nextLine();
                 str = scanner.nextLine();
                 System.out.println(getTotalJumps(str.trim()));
+                displayMenu();
+                break;
+            case 7:
+                System.out.println("Enter the input:");
+                scanner.nextLine();
+                str = scanner.nextLine();
+                int input2[] = {2, 3, -8, 7, -1, 2, 3};
+                System.out.println(getAnswer(input2));
                 displayMenu();
                 break;
             default:

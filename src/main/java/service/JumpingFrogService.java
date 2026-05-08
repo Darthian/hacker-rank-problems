@@ -33,8 +33,10 @@ public class JumpingFrogService {
         int jumps = 0;
         int index = 0;
         do {
+            //stones.get(index) represents the number of possible jumps the frog can make
            if(stones.get(index) > 0) {
-               index = index +(stones.get(index));
+               //the frog jumps and get a new position
+               index = index + (stones.get(index));
                jumps++;
            } else {
                //it means it is not possible to jump to next stone
