@@ -43,11 +43,9 @@ public class PossibleNewService {
         * Add the code for the new problem
         * */
         int possibleSum = 0;
-        int temporalSum = 0;
+        int temporalSum;
         List<Integer> possibleSubArray= new ArrayList<>();
         List<Integer> temporalSubArray ;
-
-
 
         for(int i=0; i < plainArray.length; i++) {
             temporalSubArray = new ArrayList<>();
